@@ -13,6 +13,10 @@
   --primary: hsl(193, 38%, 86%);
   --secondary: hsl(150, 100%, 66%);
 }
+::selection {
+  background-color: var(--secondary);
+  color: white;
+}
 
 body {
   font-family: "Manrope", sans-serif;
