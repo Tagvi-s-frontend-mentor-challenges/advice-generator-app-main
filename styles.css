@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  font-size: 100%;
+  --background: hsl(220, 22%, 16%);
+  --card-background: hsl(218, 20%, 24%);
+  --primary: hsl(193, 38%, 86%);
+  --secondary: hsl(150, 100%, 66%);
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  background-color: var(--background);
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  padding: 5vh;
+}
+main {
+  background-color: var(--card-background);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  gap: 20px;
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+}
+h1 {
+  color: var(--secondary);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+}
+p {
+  color: var(--primary);
+  font-size: 1.75rem;
+}
+.divider {
+  margin-bottom: 30px;
+  width: 100%;
+  display: block;
+}
+button {
+  background-color: var(--secondary);
+  border: none;
+  border-radius: 50%;
+  width: 3.5rem;
+  aspect-ratio: 1;
+  cursor: pointer;
+  position: absolute;
+  bottom: calc(-3.5rem / 2);
+  transition: all 0.2s linear;
+}
+
+button:hover {
+  box-shadow: 0 0 30px var(--secondary);
+}
+.animate {
+  animation: roll 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+@keyframes roll {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
